@@ -1,0 +1,23 @@
+## BUG ##
+- File JS Harus di import di bawah
+- Loop car pada fungsi renderTable line 28, i <= car.length harus di ubah menjadi i < car.length;
+fungsi dari loop adalah menampilkan setiap data dari array car menjadi table dan mencari data cars yang berupa object di dalam array,
+jika kondisi ini tidak di rubah maka car[i] menjadi undefined
+
+## Problem ##
+- Problem 1: (Tidak ada masalah)
+
+- Problem 2:
+Soal    : Setiap mobil yang masuk, harus didaftarkan nomor polisinya. Mobil terakhir masuk selalu ditampilkan paling atas di list.
+Solusi  : Ubah kondisi for dimana yang tadinya i = 0, ubah menjadi (i = cars.length - 1) ini dimaksudkan bahwa loop akan dimulai dari element
+          terakhir dari array, dan - 1 di sini agar sesuai dengan indexing array yang mana element pertama adalah [0]
+          agar tidak terjadi error undefined, buat if condition dimana jika array cars / cars.length === 0; loop tidak akan di eksekusi
+
+- Problem 3:
+Soal    : Biaya parkir adalah perjam, harga 1 jam pertama adalah Rp. 5000 dan harga tiap jam selanjutnya adalah Rp. 3000.
+Solusi  : Pada fungsi makeBill() perhitungannya hanya untuk perhitungan harga tiap jam selanjutnya dan untuk perhitungan untuk jam tidak 
+          di hitung, buat kondisi dimana jika hoursBilled < 2 maka 5000 * hoursBilled 
+
+- Problem 4: (Tidak ada masalah)
+
+- Problem 5: (Tidak ada masalah)
